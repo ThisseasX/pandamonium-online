@@ -1,0 +1,5 @@
+node_modules
+swagger.yaml
+dist
+dev-dist
+tsconfig.tsbuildinfo
