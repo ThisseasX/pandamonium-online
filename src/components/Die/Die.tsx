@@ -40,6 +40,10 @@ const Die = ({ side = 0, onClick = noop }: Props) => {
             <Box sx={[styles.face, styles.cover]} />
           </React.Fragment>
         ))}
+
+        <Box sx={[styles.innerCover, styles.innerCoverX]} />
+        <Box sx={[styles.innerCover, styles.innerCoverY]} />
+        <Box sx={[styles.innerCover, styles.innerCoverZ]} />
       </Box>
     </Box>
   );

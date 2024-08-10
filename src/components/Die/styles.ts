@@ -15,15 +15,18 @@ export default {
     transformStyle: 'preserve-3d',
     transformOrigin: 'center',
     willChange: 'transform',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   face: {
     position: 'absolute',
     backgroundColor: '#f4f1f2',
-    boxShadow: '0 0 8px 0px #ccc, inset 0 0 20px #ccc',
+    boxShadow: '0 0 4px 0px #eee, inset 0 0 10px #ddd',
     width: '100px',
     height: '100px',
     padding: '8px',
-    borderRadius: '24px',
+    borderRadius: '16px',
     '&:nth-of-type(1)': {
       transform: `${formatRotation(ROTATIONS[0])} translateZ(50px)`,
     },
@@ -44,7 +47,7 @@ export default {
     },
   },
   cover: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#ddd',
     boxShadow: 'none',
     '&:nth-of-type(1)': {
       transform: `${formatRotation(ROTATIONS[0])} translateZ(48px)`,
@@ -64,5 +67,23 @@ export default {
     '&:nth-of-type(6)': {
       transform: `${formatRotation(ROTATIONS[2])} translateZ(48px)`,
     },
+  },
+  innerCover: {
+    position: 'absolute',
+    width: '95px',
+    height: '95px',
+    transformOrigin: 'center',
+  },
+  innerCoverX: {
+    backgroundColor: '#ddd',
+    transform: 'rotateX(90deg)',
+  },
+  innerCoverY: {
+    backgroundColor: '#ddd',
+    transform: 'rotateY(90deg)',
+  },
+  innerCoverZ: {
+    backgroundColor: '#ddd',
+    transform: 'rotateZ(90deg)',
   },
 };
