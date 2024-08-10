@@ -14,6 +14,7 @@ export default {
     position: 'relative',
     transformStyle: 'preserve-3d',
     transformOrigin: 'center',
+    willChange: 'transform',
   },
   face: {
     position: 'absolute',

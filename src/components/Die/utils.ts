@@ -19,6 +19,7 @@ export const formatRotation = (
   return `
     rotateX(${sign}${rotation.x + offset}deg)
     rotateY(${sign}${rotation.y + offset}deg)
+    rotateZ(0deg)
   `;
 };
 
