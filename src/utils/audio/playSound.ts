@@ -1,5 +1,6 @@
-export const playSound = (audio: string, startTime = 0) => {
-  const mudSound = new Audio(audio);
-  mudSound.currentTime = startTime;
-  mudSound.play();
+export const playSound = (sound: string, startTime = 0) => {
+  const audio = new Audio(sound);
+  audio.currentTime = startTime;
+
+  audio.play();
 };

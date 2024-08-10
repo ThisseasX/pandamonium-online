@@ -1,3 +1,8 @@
 export type Die = {
-  face: number;
+  side: number;
+};
+
+export type Rotation = {
+  x: number;
+  y: number;
 };
