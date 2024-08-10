@@ -15,5 +15,7 @@ export default {
   },
   button: {
     fontSize: '32px',
+    fontWeight: 800,
+    color: '#fff',
   },
 };
