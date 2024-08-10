@@ -10,6 +10,8 @@ export default {
   dice: {
     display: 'flex',
     gap: '24px',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   button: {
     fontSize: '32px',
