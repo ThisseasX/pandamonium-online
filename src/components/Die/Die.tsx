@@ -35,7 +35,10 @@ const Die = ({ side = 0, onClick = noop }: Props) => {
         sx={[styles.container, { transform: getDieRotation(side, true) }]}
       >
         {range(0, 6).map((i) => (
-          <Box key={i} sx={styles.face} component="img" src={getDieFace(i)} />
+          <React.Fragment key={i}>
+            <Box key={i} sx={styles.face} component="img" src={getDieFace(i)} />
+            <Box sx={[styles.face, styles.cover]} />
+          </React.Fragment>
         ))}
       </Box>
     </Box>

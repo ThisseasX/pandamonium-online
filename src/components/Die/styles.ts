@@ -18,9 +18,8 @@ export default {
   },
   face: {
     position: 'absolute',
-    backfaceVisibility: 'hidden',
     backgroundColor: '#f4f1f2',
-    boxShadow: '0 0 8px 0px rgba(0, 0, 0, 0.32)',
+    boxShadow: '0 0 8px 0px #ccc, inset 0 0 20px #ccc',
     width: '100px',
     height: '100px',
     padding: '8px',
@@ -42,6 +41,28 @@ export default {
     },
     '&:nth-of-type(6)': {
       transform: `${formatRotation(ROTATIONS[2])} translateZ(50px)`,
+    },
+  },
+  cover: {
+    backgroundColor: '#e0e0e0',
+    boxShadow: 'none',
+    '&:nth-of-type(1)': {
+      transform: `${formatRotation(ROTATIONS[0])} translateZ(48px)`,
+    },
+    '&:nth-of-type(2)': {
+      transform: `${formatRotation(ROTATIONS[5])} translateZ(48px)`,
+    },
+    '&:nth-of-type(3)': {
+      transform: `${formatRotation(ROTATIONS[3])} translateZ(48px)`,
+    },
+    '&:nth-of-type(4)': {
+      transform: `${formatRotation(ROTATIONS[1])} translateZ(48px)`,
+    },
+    '&:nth-of-type(5)': {
+      transform: `${formatRotation(ROTATIONS[4])} translateZ(48px)`,
+    },
+    '&:nth-of-type(6)': {
+      transform: `${formatRotation(ROTATIONS[2])} translateZ(48px)`,
     },
   },
 };
