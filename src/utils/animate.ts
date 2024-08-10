@@ -4,6 +4,7 @@ const ANIMATION_OPTIONS_DEFAULTS = {
   duration: 500,
   fill: 'both',
   composite: 'replace',
+  easing: 'ease-out',
 } as const;
 
 export const animate = (
