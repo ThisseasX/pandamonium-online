@@ -26,7 +26,7 @@ const Die = ({ side = 0, onClick = noop }: Props) => {
     });
 
     evenRoll.current = !evenRoll.current;
-  }, [side]);
+  });
 
   return (
     <Box onClick={onClick} sx={styles.root}>

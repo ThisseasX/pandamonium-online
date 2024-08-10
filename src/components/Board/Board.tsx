@@ -1,20 +1,35 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import { Die } from 'components';
 import { playRollSound } from 'utils';
+import { map, random, range } from 'lodash/fp';
 import styles from './styles';
 
 const Board = () => {
-  const [side, setSide] = useState(4);
+  const [dice, setDice] = useState(range(0, 6));
 
   const handleClick = () => {
-    setSide((side) => (side + 1) % 6);
     playRollSound();
+    setDice(map(() => random(0, 5)));
   };
 
   return (
     <Box sx={styles.root}>
-      <Die side={side} onClick={handleClick} />
+      <Box sx={styles.dice}>
+        {dice.map((side, i) => (
+          <Die key={i} side={side} />
+        ))}
+      </Box>
+
+      <Button
+        sx={styles.button}
+        size="large"
+        variant="contained"
+        onClick={handleClick}
+      >
+        Roll
+      </Button>
     </Box>
   );
 };
