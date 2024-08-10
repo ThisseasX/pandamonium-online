@@ -21,8 +21,10 @@ const Die = ({ side = 0, onClick = noop }: Props) => {
       return;
     }
 
+    const isEven = evenRoll.current;
+
     animate(dieRef.current as HTMLElement, {
-      transform: getDieRotation(side, evenRoll.current),
+      transform: getDieRotation(side, isEven),
     });
 
     evenRoll.current = !evenRoll.current;
