@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['/**/*.png', '/**/*.mp3'],
+      includeAssets: ['/**/*.png', '/**/*.svg', '/**/*.mp3'],
       manifest,
       workbox: {
         clientsClaim: true,
